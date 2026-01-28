@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Signup Form</title>
+<style>
+body {
+background: linear-gradient(135deg, #74ebd5, #9face6);
+font-family: Arial, sans-serif;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+form {
+background: #ffffff;
+padding: 25px;
+width: 350px;
+border-radius: 12px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+transform: translateY(-5px);
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+label {
+display: block;
+margin-top: 12px;
+font-weight: bold;
+color: #333;
+transition: all 0.3s ease;
+cursor: pointer;
+}
+
+label:hover {
+color: #6c63ff;
+transform: translateX(5px);
+text-shadow: 0 0 8px rgba(108, 99, 255, 0.4);
+}
+
+input {
+width: 100%;
+padding: 8px;
+margin-top: 5px;
+border: 1px solid #ccc;
+border-radius: 6px;
+font-size: 14px;
+transition: all 0.3s ease;
+box-sizing: border-box;
+}
+
+input:focus {
+border-color: #6c63ff;
+outline: none;
+background-color: #f3f2ff;
+box-shadow: 0 0 15px rgba(108, 99, 255, 0.4);
+}
+
+input:hover {
+border-color: #6c63ff;
+box-shadow: 0 0 15px rgba(108,99,255,0.4);
+transform: translateY(-2px) scale(1.02);
+background-color: #f8f7ff;
+}
+
+input[type="range"] {
+padding: 0;
+height: 6px;
+}
+
+input[type="range"]:hover {
+height: 8px;
+box-shadow: 0 0 15px rgba(108,99,255,0.6);
+transform: scale(1.05);
+}
+
+.age-display {
+display: inline-block;
+margin-left: 10px;
+background: #6c63ff;
+color: white;
+padding: 4px 8px;
+border-radius: 12px;
+font-weight: bold;
+font-size: 14px;
+transition: all 0.3s ease;
+}
+
+.age-display:hover {
+background: #574bdb;
+transform: scale(1.1);
+box-shadow: 0 4px 12px rgba(108, 99, 255, 0.5);
+}
+
+button {
+margin-top: 20px;
+width: 100%;
+padding: 12px;
+background: #6c63ff;
+color: white;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+transition: all 0.3s ease;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+button:hover {
+background: #574bdb;
+transform: translateY(-3px) scale(1.03);
+box-shadow: 0 8px 25px rgba(108, 99, 255, 0.5);
+}
+
+button:active {
+transform: translateY(-1px) scale(1.01);
+}
+</style>
+</head>
+<body>
+
+<form>
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required>
+
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob" name="dob" required>
+
+<label for="age">Age: <span class="age-display">18</span></label>
+<input type="range" id="age" name="age" min="18" max="100" value="18">
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+
+<label for="website">Website:</label>
+<input type="url" id="website" name="website">
+
+<button type="submit">Sign Up</button>
+</form>
